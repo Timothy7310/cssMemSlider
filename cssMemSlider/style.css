@@ -123,3 +123,16 @@ body{
 #slide4:checked ~ .controls .controls-dot:nth-of-type(4) .controls-dot__span {
 	background-color: transparent;
 }
+
+#slide1:checked ~ .slider-wrap > .slider-slide{
+	left: calc(0 * -100%);
+}
+#slide2:checked ~ .slider-wrap > .slider-slide{
+	left: calc(1 * -100%);
+}
+#slide3:checked ~ .slider-wrap > .slider-slide{
+	left: calc(2 * -100%);
+}
+#slide4:checked ~ .slider-wrap > .slider-slide{
+	left: calc(3 * -100%);
+}
