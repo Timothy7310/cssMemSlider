@@ -1,5 +1,6 @@
 :root{
     --dots-width: calc((4 * 1.5rem) + (3 * 1.5rem));
+	--dot-proportion: 1.25rem;
 	--color-dot: #71abfe;
     --dot-hover-color: #fff;
 	--dot-active-color: #686868;
@@ -98,8 +99,8 @@ body{
 
 .controls-dot__span {
 	display: block;
-	height: 1.25rem;
-	width: 1.25rem;
+	height: var(--dot-proportion);
+	width: var(--dot-proportion);
 	border-radius: 50%;
 	border: 2px solid var(--color-dot);
 	background-color: var(--color-dot);
@@ -135,4 +136,33 @@ body{
 }
 #slide4:checked ~ .slider-wrap > .slider-slide{
 	left: calc(3 * -100%);
+}
+
+@media(max-width:567px){
+	.slider-container{
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr var(--dot-proportion) var(--dot-proportion);
+	}
+	.slider-wrap{
+		grid-column: 1;
+		grid-row: 1 / 4;
+	}
+	.controls{
+		grid-column: 1;
+		grid-row: 2;
+		justify-self: center;
+	}
+	.slider-slide{
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr var(--dot-proportion) var(--dot-proportion);
+		gap: 1.6rem;
+	}
+	.slider-slide__img{
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.slider-slide__text{
+		grid-column: 1;
+		grid-row: 3;
+	}
 }
