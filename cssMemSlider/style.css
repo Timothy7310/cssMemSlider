@@ -138,16 +138,16 @@ body{
 }
 
 #slide1:checked ~ .slider-wrap > .slider-slide{
-	left: calc(0 * -100%);
+	transform: translateX(0);
 }
 #slide2:checked ~ .slider-wrap > .slider-slide{
-	left: calc(1 * -100%);
+	transform: translateX(-100%);
 }
 #slide3:checked ~ .slider-wrap > .slider-slide{
-	left: calc(2 * -100%);
+	transform: translateX(-200%);
 }
 #slide4:checked ~ .slider-wrap > .slider-slide{
-	left: calc(3 * -100%);
+	transform: translateX(-300%);
 }
 
 @media(max-width:567px){
